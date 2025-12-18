@@ -1,12 +1,10 @@
-// import { getPosts } from '@/lib/contentful';
+import { getPosts } from '@/lib/contentful';
 import Link from 'next/link';
 import { Post } from '@/types/contentful';
 
 export default async function NewsPage() {
-  // 方法二：暂时返回空数组
-  const posts: Post[] = [];
-  // 如果 Contentful 已配置，取消下面的注释
-  // const posts: Post[] = await getPosts(10);
+  // 从 Contentful 获取所有新闻
+  const posts: Post[] = await getPosts(10);
 
   return (
     <div className="py-20 bg-white">
