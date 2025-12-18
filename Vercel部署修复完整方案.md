@@ -22,7 +22,7 @@ git add .
 git commit -m "修复类型错误，暂时禁用 Contentful"
 
 # 推送到 GitHub
-git push origin main
+git push origin master
 ```
 
 ### 第三步：Vercel 会自动重新部署
@@ -82,7 +82,7 @@ export default async function Home() {
 cd D:\project\website
 git add .
 git commit -m "修复类型错误"
-git push origin main
+git push origin master
 ```
 
 ### 2. 等待 Vercel 自动部署

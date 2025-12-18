@@ -35,7 +35,7 @@ if errorlevel 1 (
 call git commit -m "Remove all files" 2>nul
 echo ✅ 文件已删除并提交
 echo.
-echo 要推送到远程，运行: git push -u origin main
+echo 要推送到远程，运行: git push -u origin master
 goto end
 
 :option2

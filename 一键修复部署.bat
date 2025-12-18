@@ -37,7 +37,7 @@ echo.
 
 echo [3/5] 检查是否已推送到 GitHub...
 git fetch origin >nul 2>&1
-git diff HEAD origin/main --quiet
+git diff HEAD origin/master --quiet
 if errorlevel 1 (
     echo ⚠️  本地代码与远程不一致
     echo.
@@ -46,7 +46,7 @@ if errorlevel 1 (
     if /i "%choice%"=="Y" (
         echo.
         echo 正在推送到 GitHub...
-        git push origin main
+        git push origin master
         if errorlevel 1 (
             echo ❌ 推送失败，请检查网络或权限
         ) else (

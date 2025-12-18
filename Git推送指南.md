@@ -20,7 +20,7 @@ git remote remove origin
 git remote add origin https://github.com/zhengyehui/website.git
 
 # 重新推送
-git push -u origin main
+git push -u origin master
 ```
 
 ### 方法二：直接使用 HTTPS 创建仓库
@@ -69,8 +69,8 @@ git remote add origin https://github.com/zhangsan/website.git
 ### 4. 推送到 GitHub
 
 ```bash
-# 推送到 main 分支
-git push -u origin main
+# 推送到 master 分支
+git push -u origin master
 ```
 
 如果提示输入用户名和密码：
@@ -117,14 +117,11 @@ git remote add origin https://github.com/你的用户名/仓库名.git
 
 ### 检查分支名称
 
-GitHub 默认使用 `main`，如果本地是 `master`：
+如果本地是 `master` 分支，直接推送即可：
 
 ```bash
-# 重命名分支
-git branch -M main
-
-# 然后推送
-git push -u origin main
+# 推送到 master 分支
+git push -u origin master
 ```
 
 ---
@@ -198,7 +195,7 @@ git commit -m "Initial commit"
 git remote add origin https://github.com/你的用户名/仓库名.git
 
 # 推送到 GitHub
-git push -u origin main
+git push -u origin master
 ```
 
 如果提示输入密码，使用 Personal Access Token。

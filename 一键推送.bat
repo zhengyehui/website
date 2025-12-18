@@ -44,7 +44,7 @@ if errorlevel 1 (
 echo.
 
 echo [5/5] 设置分支并推送...
-call git branch -M main 2>nul
+call git branch -M master 2>nul
 
 REM 检查远程仓库
 call git remote get-url origin >nul 2>&1
@@ -60,7 +60,7 @@ echo.
 echo 正在推送到 GitHub...
 echo 如果提示输入密码，使用 Personal Access Token
 echo.
-call git push -u origin main
+call git push -u origin master
 
 if errorlevel 1 (
     echo.

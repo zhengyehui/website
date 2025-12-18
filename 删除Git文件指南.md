@@ -20,7 +20,7 @@ git rm -rf .
 git commit -m "Remove all files"
 
 # 推送到远程
-git push -u origin main
+git push -u origin master
 ```
 
 ### 方式二：完全删除 Git 仓库（重新开始）
@@ -51,7 +51,7 @@ git rm -rf .
 git commit -m "Remove all files"
 
 # 强制推送到远程（覆盖远程历史）
-git push -u origin main --force
+git push -u origin master --force
 ```
 
 ---
@@ -64,7 +64,7 @@ git push -u origin main --force
 cd D:\project\website
 git rm -rf .
 git commit -m "Remove all files"
-git push -u origin main
+git push -u origin master
 ```
 
 ### 脚本 2：完全删除 Git 并重新初始化
@@ -76,7 +76,7 @@ git init
 git add .
 git commit -m "Initial commit"
 git remote add origin https://github.com/zhengyehui/website.git
-git push -u origin main --force
+git push -u origin master --force
 ```
 
 ---
@@ -105,7 +105,7 @@ git push -u origin main --force
 
 4. **强制推送**（覆盖远程）：
    ```bash
-   git push -u origin main --force
+   git push -u origin master --force
    ```
 
 ---

@@ -21,7 +21,7 @@ git status
 # 如果有未提交的更改
 git add .
 git commit -m "修复类型错误"
-git push origin main
+git push origin master
 ```
 
 #### 步骤 2：在 GitHub 上验证
@@ -52,14 +52,14 @@ git push origin main
 - 推送一个空提交：
   ```bash
   git commit --allow-empty -m "触发重新部署"
-  git push origin main
+  git push origin master
   ```
 
 **方法二：手动触发**
 1. 在 Vercel 项目页面
 2. 点击 **Deployments**
 3. 点击 **Create Deployment**
-4. 选择 `main` 分支
+4. 选择 `master` 分支
 5. 点击 **Deploy**
 
 ---
@@ -147,7 +147,7 @@ Error: CONTENTFUL_SPACE_ID is not set
 ```bash
 cd D:\project\website
 git commit --allow-empty -m "触发重新部署"
-git push origin main
+git push origin master
 ```
 
 ### 方法二：修改文件触发
@@ -161,12 +161,12 @@ echo. > .vercel-trigger
 # 提交并推送
 git add .vercel-trigger
 git commit -m "触发重新部署"
-git push origin main
+git push origin master
 
 # 删除临时文件
 git rm .vercel-trigger
 git commit -m "清理临时文件"
-git push origin main
+git push origin master
 ```
 
 ### 方法三：在 Vercel 中手动触发

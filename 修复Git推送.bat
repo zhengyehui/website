@@ -64,7 +64,7 @@ echo    git add .
 echo    git commit -m "Initial commit"
 echo.
 echo 2. 推送到 GitHub:
-echo    git push -u origin main
+echo    git push -u origin master
 echo.
 echo 如果提示输入密码，使用 Personal Access Token
 echo （不是 GitHub 密码）

@@ -56,7 +56,7 @@ git add .
 git commit -m "修复类型错误，可以正常部署"
 
 # 推送到 GitHub
-git push origin main
+git push origin master
 ```
 
 ### 2.3 验证推送成功
@@ -132,7 +132,7 @@ const posts: Post[] = [];
 cd D:\project\website
 
 # 确保是最新的代码
-git pull origin main
+git pull origin master
 
 # 清理并构建
 rmdir /s /q .next 2>nul
@@ -152,7 +152,7 @@ cd D:\project\website
 
 # 创建一个空提交来触发重新部署
 git commit --allow-empty -m "触发重新部署"
-git push origin main
+git push origin master
 ```
 
 ### 5.2 方法二：在 Vercel 中手动触发
@@ -160,7 +160,7 @@ git push origin main
 1. 在 Vercel 项目页面
 2. 点击 **Deployments**
 3. 点击 **Create Deployment**
-4. 选择 `main` 分支
+4. 选择 `master` 分支
 5. 点击 **Deploy**
 
 ---
@@ -217,7 +217,7 @@ git push origin main
 ```bash
 git add .
 git commit -m "暂时禁用类型检查"
-git push origin main
+git push origin master
 ```
 
 ---
