@@ -1,22 +1,28 @@
-import { getPostBySlug, getPosts } from '@/lib/contentful';
+// import { getPostBySlug, getPosts } from '@/lib/contentful';
+import { Post } from '@/types/contentful';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
 
 export async function generateStaticParams() {
-  const posts = await getPosts(100).catch(() => []);
-  return posts.map((post: any) => ({
+  // 方法二：暂时返回空数组
+  const posts: Post[] = [];
+  // 如果 Contentful 已配置，取消下面的注释
+  // const posts: Post[] = await getPosts(100);
+  return posts.map((post) => ({
     slug: post.fields.slug,
   }));
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  const post = await getPostBySlug(params.slug).catch(() => null);
-
-  if (!post) {
-    notFound();
-  }
-
-  const { title, content, publishedAt, excerpt } = post.fields as any;
+  // 方法二：暂时返回 404
+  notFound();
+  
+  // 如果 Contentful 已配置，取消下面的注释
+  // const post = await getPostBySlug(params.slug).catch(() => null);
+  // if (!post) {
+  //   notFound();
+  // }
+  // const { title, content, publishedAt, excerpt } = post.fields as any;
 
   // 简单的内容渲染（如果需要富文本，可以安装 @contentful/rich-text-react-renderer）
   const renderContent = () => {

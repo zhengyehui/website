@@ -17,7 +17,7 @@ git remote -v
 git remote remove origin
 
 # 添加 HTTPS 地址（替换为你的仓库地址）
-git remote add origin https://github.com/你的用户名/仓库名.git
+git remote add origin https://github.com/zhengyehui/website.git
 
 # 重新推送
 git push -u origin main

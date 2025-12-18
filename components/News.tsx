@@ -1,13 +1,5 @@
 import Link from 'next/link';
-
-interface Post {
-  fields: {
-    title: string;
-    slug: string;
-    excerpt?: string;
-    publishedAt?: string;
-  };
-}
+import { Post } from '@/types/contentful';
 
 interface NewsProps {
   posts: Post[];

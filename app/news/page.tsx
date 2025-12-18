@@ -1,8 +1,12 @@
-import { getPosts } from '@/lib/contentful';
+// import { getPosts } from '@/lib/contentful';
 import Link from 'next/link';
+import { Post } from '@/types/contentful';
 
 export default async function NewsPage() {
-  const posts = await getPosts(10).catch(() => []);
+  // 方法二：暂时返回空数组
+  const posts: Post[] = [];
+  // 如果 Contentful 已配置，取消下面的注释
+  // const posts: Post[] = await getPosts(10);
 
   return (
     <div className="py-20 bg-white">
@@ -18,7 +22,7 @@ export default async function NewsPage() {
           </div>
         ) : (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {posts.map((post: any, index: number) => (
+            {posts.map((post: Post, index: number) => (
               <Link
                 key={index}
                 href={`/news/${post.fields.slug}`}
